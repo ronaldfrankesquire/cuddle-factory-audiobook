@@ -23,3 +23,5 @@ http://127.0.0.1:5173/
 Replacing any page or narration file with the same filename will update the reader automatically.
 
 The reader also includes page motion: slow illustration drift and sparkle effects run while narration is playing.
+
+The layout is tuned for iPhone and iPad playback, with safe-area spacing, large touch targets, a compact bottom player on phones, and a landscape layout for smaller mobile screens.
