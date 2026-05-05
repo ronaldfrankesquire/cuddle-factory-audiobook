@@ -19,14 +19,15 @@
               <h1>Cuddle Factory</h1>
               <p class="subtitle">The Tiny Noise in the Toy Box</p>
               <div class="start-note">
-                <span>12 illustrated pages</span>
-                <span>narrated page by page</span>
+                <span>Press Play to begin</span>
+                <span>12 narrated pages</span>
               </div>
             </div>
           </article>
 
           <article class="story-page is-hidden" id="storyPage">
             <img id="pageImage" src="assets/pages/1.png" alt="Story page 1" />
+            <div class="fx-layer" id="fxLayer" aria-hidden="true"></div>
           </article>
         </div>
       </section>
@@ -40,7 +41,7 @@
 
         <div class="audio-card">
           <div class="audio-actions">
-            <button class="icon-button" id="playPause" type="button" aria-label="Play or pause narration" disabled>
+            <button class="icon-button" id="playPause" type="button" aria-label="Start or pause narration">
               <span id="playIcon" aria-hidden="true">Play</span>
             </button>
             <div class="time-row">
@@ -50,7 +51,7 @@
           </div>
           <input id="seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Narration progress" disabled />
           <label class="toggle">
-            <input id="autoTurn" type="checkbox" />
+            <input id="autoTurn" type="checkbox" checked />
             <span>Auto turn</span>
           </label>
         </div>

@@ -21,3 +21,5 @@ http://127.0.0.1:5173/
 - `assets/audio/1.m4a` through `assets/audio/12.m4a` are the matching narration files.
 
 Replacing any page or narration file with the same filename will update the reader automatically.
+
+The reader also includes page motion: slow illustration drift and sparkle effects run while narration is playing.
