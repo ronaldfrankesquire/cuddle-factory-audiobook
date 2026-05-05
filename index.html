@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuddle Factory Audiobook</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-label="Cuddle Factory audiobook reader">
+      <section class="reader" aria-live="polite">
+        <div class="stage" id="stage">
+          <article class="cover-spread" id="coverSpread">
+            <figure class="cover-frame">
+              <img src="assets/cover/cover.png" alt="Cuddle Factory cover art" />
+            </figure>
+            <div class="title-page" aria-label="Title page">
+              <p class="eyebrow">Audiobook</p>
+              <h1>Cuddle Factory</h1>
+              <p class="subtitle">The Tiny Noise in the Toy Box</p>
+              <div class="start-note">
+                <span>12 illustrated pages</span>
+                <span>narrated page by page</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-page is-hidden" id="storyPage">
+            <img id="pageImage" src="assets/pages/1.png" alt="Story page 1" />
+          </article>
+        </div>
+      </section>
+
+      <aside class="control-panel" aria-label="Audiobook controls">
+        <div class="page-meta">
+          <span id="pageKicker">Cover</span>
+          <h2 id="pageTitle">Cuddle Factory</h2>
+          <p id="pageCounter">Ready to begin</p>
+        </div>
+
+        <div class="audio-card">
+          <div class="audio-actions">
+            <button class="icon-button" id="playPause" type="button" aria-label="Play or pause narration" disabled>
+              <span id="playIcon" aria-hidden="true">Play</span>
+            </button>
+            <div class="time-row">
+              <span id="currentTime">0:00</span>
+              <span id="duration">0:00</span>
+            </div>
+          </div>
+          <input id="seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Narration progress" disabled />
+          <label class="toggle">
+            <input id="autoTurn" type="checkbox" />
+            <span>Auto turn</span>
+          </label>
+        </div>
+
+        <div class="nav-row">
+          <button id="prevPage" type="button" disabled>Previous Page</button>
+          <button id="nextPage" type="button">Next Page</button>
+        </div>
+
+        <div class="thumb-strip" id="thumbStrip" aria-label="Page shortcuts"></div>
+      </aside>
+    </main>
+
+    <audio id="narration" preload="metadata"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
